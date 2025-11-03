@@ -3,7 +3,6 @@ import { CNLink } from '@/components/chakra-next'
 import { siteConfig } from '@/libs/configs/site.config'
 import { projectsData } from '@/libs/data/project.data'
 import { worksData } from '@/libs/data/work.data'
-import { GiLightningTrio } from 'react-icons/gi'
 import {
   Box,
   Button,
