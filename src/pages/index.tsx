@@ -15,6 +15,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  Link,
 } from '@chakra-ui/react'
 import { IconType } from 'react-icons'
 import { AiOutlineOpenAI } from 'react-icons/ai'
@@ -42,7 +43,7 @@ import { FaRegCalendarDays } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
 import { RiNextjsFill } from 'react-icons/ri'
 import { SiExpress, SiMui, SiPrisma } from 'react-icons/si'
-
+import NextLink from 'next/link'
 export default function Home() {
   return (
     <>
@@ -268,71 +269,33 @@ const Projects = () => {
                 {project.description}
               </Text>
               <Flex flexWrap="wrap" justifyContent="space-between" width="100%">
-                {project.github ? (
-                  <CNLink
-                    as="a"
-                    href={project.github}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    border="2px solid"
-                    borderColor="brand.emphasized"
-                    bgColor="brand"
-                    color="inherit"
-                    flex={1}
-                    mr={2}
-                    px={5}
-                    py={2.5}
-                    borderRadius="xl"
-                    textDecoration="none"
-                    fontWeight="semibold"
-                    _hover={{
-                      bg: 'brand.muted',
-                      borderColor: 'brand',
-                      boxShadow: 'lg',
-                      textDecoration: 'none',
-                    }}
+                {project.github && (
+                  <Button
+                    key={index}
+                    variant={'outline'}
+                    _hover={{ bg: 'brand.muted' }}
+                    color={'brand'}
+                    borderColor={'gray.subtel'}
                   >
-                    <FaGithub style={{ marginRight: 8 }} />
-                    Github
-                  </CNLink>
-                ) : (
-                  <Box flex={1} />
+                    <Link>
+                      <FaGithub style={{ marginRight: 8 }} />
+                      <NextLink href={project.github}>Github</NextLink>
+                    </Link>
+                  </Button>
                 )}
-                {project.liveDemo ? (
-                  <CNLink
-                    as="a"
-                    href={project.liveDemo}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                    border="2px solid"
-                    borderColor="brand.emphasized"
-                    bgColor="brand"
-                    color="inherit"
-                    flex={1}
-                    mr={2}
-                    px={5}
-                    py={2.5}
-                    borderRadius="xl"
-                    textDecoration="none"
-                    fontWeight="semibold"
-                    _hover={{
-                      bg: 'brand.muted',
-                      borderColor: 'brand',
-                      boxShadow: 'lg',
-                      textDecoration: 'none',
-                    }}
+                {project.liveDemo && (
+                  <Button
+                    key={index}
+                    variant={'outline'}
+                    _hover={{ bg: 'brand.muted' }}
+                    color={'brand'}
+                    borderColor={'gray.subtel'}
                   >
-                    <GiLightningTrio style={{ marginRight: 8 }} />
-                    Live Demo
-                  </CNLink>
-                ) : (
-                  <Box flex={1} />
+                    <Link>
+                      <FaGithub style={{ marginRight: 8 }} />
+                      <NextLink href={project.liveDemo}>Live Demo</NextLink>
+                    </Link>
+                  </Button>
                 )}
               </Flex>
             </Stack>

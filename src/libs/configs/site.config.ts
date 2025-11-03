@@ -4,10 +4,10 @@ export const siteConfig = {
     title: 'Software Engineer',
     avatar: '/assets/avatar-4.png',
     location: 'Bangalore, India',
-    experience: '1.2 years',
+    experience: '1.4 years',
     about:
-      'Hi, I am a Software Engineer from India with 1.2 years of experience in building web applications. I specialize in React and Node.js.',
-    keywords: ['Software Engineer', 'Full Stack Developer', 'React', 'Node.js'],
+      'Hi, I am a Software Engineer from India with 1.4 years of experience in building web applications. I specialize in React, Python, Typescript and Node.js.',
+    keywords: ['Software Engineer', 'Full Stack Developer', 'React', 'Node.js', 'Python'],
   },
   contact: {
     email: 'kathayatayush789@gmail.com',
